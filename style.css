@@ -254,7 +254,7 @@ span {
     grid-row: 4;
   }
 
-  .card.white span, .card.black span, .card.gray span {
+  .card.white span, .card.black span, .card.gray span, .card.purple span {
     display: inline-block;
   }
 
