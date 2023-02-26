@@ -1,0 +1,299 @@
+:root {
+    --violet: hsl(263, 55%, 52%);
+    --gray-blue: hsl(217, 19%, 35%);
+    --black-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-gray-blue: hsl(210, 46%, 95%);
+}
+
+/* ******************** */
+/* RESET */
+/* ******************** */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+body,
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+/* ******************** */
+/* Desktop Layout */
+/* ******************** */
+
+body {
+  background-color: var(--light-gray);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  display: block;
+}
+
+.testimonials {
+  max-width: 144rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.circle {
+  border-radius: 100%;
+  max-width: 3rem;
+  width: 100%;
+  height: auto;
+}
+
+.circle.pink-border {
+  border: 2px solid hsl(263, 51%, 64%);
+}
+
+.circle.purple-border {
+  border: 2px solid var(--violet);
+}
+
+.card.purple {
+  position: relative;
+  background-color: var(--violet);
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.layout {
+  position: absolute;
+  top: 0;
+  left: 67%;
+}
+
+.pattern {
+  width: 100%;
+  height: 100%;
+}
+
+.card.gray {
+  background-color: var(--gray-blue);
+}
+
+.card.white {
+  background-color: var(--white);
+}
+
+.row {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
+
+.card.black {
+  background-color: var(--black-blue);
+  grid-column: 2 / 4;
+}
+
+.content {
+  display: grid;
+  padding: 3rem;
+  gap: 1.8rem;
+}
+
+.author.white-name {
+  color: var(--light-gray-blue);
+}
+
+.author {
+  color: var(--black-blue);
+}
+
+.graduate.white-desc {
+  color: var(--white);
+  opacity: 50%;
+}
+
+.graduate {
+  color: var(--gray-blue);
+  opacity: 50%;
+}
+
+.author, .graduate {
+  font-weight: 400;
+}
+
+.author {
+  font-size: 1.3rem;
+}
+
+.graduate {
+  font-size: 1.1rem;
+}
+
+.title {
+  color: var(--white);
+  font-size: 2rem;
+  line-height: 1.2;
+  z-index: 1;
+}
+
+.title.gray-blue {
+  color: var(--gray-blue)
+}
+
+.desc {
+  color: var(--black-blue);
+  opacity: 70%;
+  font-size: 1.3rem;
+}
+
+.desc.gray-desc {
+  color: var(--white); 
+  opacity: 50%;
+}
+
+.author-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.verified-container {
+  line-height: 1.3;
+}
+
+/* ******************** */
+/* Laptop/Mobile Layout */
+/* ******************** */
+
+@media (max-width: 768px) {
+
+  span {
+    display: inline-block;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+    margin: 5rem;
+  }
+
+  .row {
+    grid-column: 1 / 2;
+    grid-row: 5;
+  }
+
+  .row-1 {
+    grid-column: 1 / 2;
+    grid-row: 3;
+  }
+  
+  .card.black {
+    background-color: var(--black-blue);
+    grid-column: 1 / 2;
+  }
+
+  .card.purple {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+
+  .creation {
+    display: none;
+  }
+}
+
+/* ******************** */
+/* Creation */
+/* ******************** */
+
+.creation {
+  position: fixed;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  text-align: center;
+}
+
+.creation span {
+  display: inline-block;
+}
+
+.creation .author {
+  font-size: 1.4rem;
+}
+
+.creation .author span {
+  color: var(--gray-blue);
+}
+
+.creation .author-link, .creation .fm-link {
+  color: var(--black-blue);
+}
+
+.creation .fm-link:hover, .creation .author-link:hover {
+  color: var(--violet);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+
+
+
+
