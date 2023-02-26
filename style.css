@@ -77,7 +77,7 @@ select {
 /* ******************** */
 
 body {
-  background-color: var(--light-gray);
+  background-color: var(--light-gray-blue);
   font-family: 'Barlow Semi Condensed', sans-serif;
   display: flex;
   justify-content: center;
