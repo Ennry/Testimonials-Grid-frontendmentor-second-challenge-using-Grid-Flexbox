@@ -282,7 +282,7 @@ span {
 
   .row {
     grid-column: 1 / 2;
-    grid-row: 5;
+    grid-row: 4;
   }
 
   .row-1 {
@@ -294,6 +294,12 @@ span {
     background-color: var(--black-blue);
     grid-column: 1 / 2;
   }
+    
+  .card.gray {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+      
 
   .card.purple {
     grid-column: 1 / 2;
